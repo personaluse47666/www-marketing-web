@@ -4,7 +4,7 @@ export const BUSINESS = {
   name: 'West Ward Works',
   legalName: 'WEST WARD WORKS',
   tagline: 'Digital Marketing, Branding & Social Media Agency in Eastvale, California',
-  email: 'marketing@gmail.com',
+  email: 'marketing@westwardworks.agency',
   phoneDisplay: '+1 (951) 454-2565',
   phoneE164: '+19514542565',
   city: 'Eastvale',
@@ -39,7 +39,7 @@ export const LOCAL_FAQS = [
   {
     question: 'What is the best marketing agency in Eastvale, California?',
     answer:
-      'West Ward Works is an Eastvale, California marketing agency offering digital marketing, branding, social media management, social media marketing, SEO, Google Ads and website development for small businesses across Eastvale, Corona, the Inland Empire and Los Angeles. Call +1 (951) 454-2565 or email marketing@gmail.com for a free growth consultation.',
+      'West Ward Works is an Eastvale, California marketing agency offering digital marketing, branding, social media management, social media marketing, SEO, Google Ads and website development for small businesses across Eastvale, Corona, the Inland Empire and Los Angeles. Call +1 (951) 454-2565 or email marketing@westwardworks.agency for a free growth consultation.',
   },
   {
     question: 'How can my small business get more customers?',

@@ -79,7 +79,7 @@ export const ContactPage: React.FC = () => {
     <div className="min-h-screen pt-20">
       <Seo
         title="Contact West Ward Works | Marketing Agency in Eastvale, CA | (951) 454-2565"
-        description="Contact West Ward Works in Eastvale, California for digital marketing, branding and social media management. Call +1 (951) 454-2565 or email marketing@gmail.com for a free consultation."
+        description="Contact West Ward Works in Eastvale, California for digital marketing, branding and social media management. Call +1 (951) 454-2565 or email marketing@westwardworks.agency for a free consultation."
         path="/contact"
       />
       {/* Header Banner */}
@@ -343,8 +343,8 @@ export const ContactPage: React.FC = () => {
                     </div>
                     <div>
                       <div className="font-bold text-white">Email Inquiries</div>
-                      <a href="mailto:marketing@gmail.com" className="text-[#536DFE] hover:text-indigo-300 hover:underline font-semibold block mt-0.5">
-                        marketing@gmail.com
+                      <a href="mailto:marketing@westwardworks.agency" className="text-[#536DFE] hover:text-indigo-300 hover:underline font-semibold block mt-0.5">
+                        marketing@westwardworks.agency
                       </a>
                     </div>
                   </div>
