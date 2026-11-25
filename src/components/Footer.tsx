@@ -96,24 +96,24 @@ export const Footer: React.FC = () => {
             </Link>
             
             <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
-              WEST WARD WORKS is an elite full-service digital marketing and web engineering agency. We turn ambitious brands into category leaders through autonomous AI ad engines, generative search optimization (GEO), and ultra-fast web platforms.
+              WEST WARD WORKS is a full-service digital marketing, branding and social media agency in Eastvale, California, serving the Inland Empire and Los Angeles. We turn ambitious brands into category leaders through autonomous AI ad engines, generative search optimization (GEO), and ultra-fast web platforms.
             </p>
 
             <div className="pt-2 space-y-2 text-xs text-slate-400">
               <div className="flex items-center gap-2.5">
                 <MapPin className="w-4 h-4 text-[#FF6B6B] shrink-0" />
-                <span>100 Tech Horizon Boulevard, Suite 400, San Francisco, CA 94107</span>
+                <Link to="/digital-marketing-agency-eastvale-ca" className="hover:text-white transition-colors">Eastvale, California, United States</Link>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#3D5AFE] shrink-0" />
-                <a href="mailto:hello@westwardworks.agency" className="hover:text-white transition-colors">
-                  hello@westwardworks.agency
+                <a href="mailto:marketing@gmail.com" className="hover:text-white transition-colors">
+                  marketing@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#3D5AFE] shrink-0" />
-                <a href="tel:+18004567890" className="hover:text-white transition-colors">
-                  +1 (800) 456-7890
+                <a href="tel:+19514542565" className="hover:text-white transition-colors">
+                  +1 (951) 454-2565
                 </a>
               </div>
             </div>
@@ -198,6 +198,11 @@ export const Footer: React.FC = () => {
               <li>
                 <Link to="/services/social-media-marketing" className="hover:text-white transition-colors">
                   Social Media Marketing
+                </Link>
+              </li>
+              <li>
+                <Link to="/digital-marketing-agency-eastvale-ca" className="hover:text-white transition-colors">
+                  Marketing Agency in Eastvale, CA
                 </Link>
               </li>
             </ul>

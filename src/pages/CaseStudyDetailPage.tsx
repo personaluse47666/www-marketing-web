@@ -11,6 +11,7 @@ import { AnimatedCounter } from '../components/ui/AnimatedCounter';
 import { Hero3DBackground } from '../components/3d/Hero3DBackground';
 import { MagneticButton } from '../components/ui/MagneticButton';
 import { CallToActionBanner } from '../components/CallToActionBanner';
+import { Seo } from '../components/Seo';
 
 export const CaseStudyDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -39,6 +40,11 @@ export const CaseStudyDetailPage: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-20">
+      <Seo
+        title={`${caseStudy.title} | West Ward Works Case Study`}
+        description={caseStudy.summary}
+        path={`/case-studies/${caseStudy.slug}`}
+      />
       {/* Dynamic Hero Section */}
       <section className="relative py-16 lg:py-20 border-b border-white/10 overflow-hidden">
         <Hero3DBackground theme="california" density="low" />

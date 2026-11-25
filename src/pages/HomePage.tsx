@@ -18,6 +18,8 @@ import { TextReveal } from '../components/ui/TextReveal';
 import { servicesData, getServicesByCategory } from '../lib/servicesData';
 import { caseStudiesData } from '../lib/caseStudiesData';
 import { ServiceCategory } from '../types';
+import { Seo, faqJsonLd } from '../components/Seo';
+import { LOCAL_FAQS, LOCAL_PAGE_PATH, AREAS_SERVED } from '../lib/siteConfig';
 
 export const HomePage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<ServiceCategory | 'All'>('All');
@@ -39,6 +41,13 @@ export const HomePage: React.FC = () => {
 
   return (
     <div className="relative min-h-screen pt-20 overflow-hidden">
+      <Seo
+        title="Digital Marketing, Branding & Social Media Agency in Eastvale, CA | West Ward Works"
+        description="West Ward Works is a digital marketing, branding and social media management agency in Eastvale, California serving the Inland Empire and Los Angeles. SEO, Google Ads, social media marketing and websites that get you more customers."
+        path="/"
+        keywords="marketing agency Eastvale, digital marketing agency Eastvale CA, branding agency, social media management, social media marketing, SEO agency Inland Empire, digital marketing Los Angeles, how to get more customers"
+        jsonLd={faqJsonLd(LOCAL_FAQS)}
+      />
       {/* ==========================================
           HERO SECTION WITH 3D BACKGROUND
           ========================================== */}
@@ -243,6 +252,26 @@ export const HomePage: React.FC = () => {
               <CaseStudyCard key={cs.id} caseStudy={cs} idx={idx} />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section id="eastvale-marketing-agency" className="py-20 bg-slate-950/40 border-t border-white/10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Your Local Marketing, Branding &amp; Social Media Agency in Eastvale, California
+          </h2>
+          <p className="mt-4 text-slate-300 max-w-3xl leading-relaxed">
+            Based in Eastvale, CA, West Ward Works helps businesses across the Inland Empire and Los Angeles get more customers
+            with digital marketing, branding, social media management, social media marketing, local SEO and Google Ads.
+          </p>
+          <ul className="mt-6 flex flex-wrap gap-2 text-sm text-slate-400">
+            {AREAS_SERVED.map((area) => (
+              <li key={area} className="px-3 py-1 rounded-full border border-white/10">{area}</li>
+            ))}
+          </ul>
+          <Link to={LOCAL_PAGE_PATH} className="mt-8 inline-flex items-center gap-2 text-[#536DFE] font-bold hover:underline">
+            How we help Eastvale businesses get more customers <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </section>
 

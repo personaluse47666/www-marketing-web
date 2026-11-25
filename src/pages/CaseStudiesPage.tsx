@@ -6,6 +6,7 @@ import { Hero3DBackground } from '../components/3d/Hero3DBackground';
 import { CallToActionBanner } from '../components/CallToActionBanner';
 import { TextReveal } from '../components/ui/TextReveal';
 import { ServiceCategory } from '../types';
+import { Seo } from '../components/Seo';
 
 export const CaseStudiesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<ServiceCategory | 'All'>('All');
@@ -23,6 +24,11 @@ export const CaseStudiesPage: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-20">
+      <Seo
+        title="Marketing Case Studies & Results | West Ward Works Eastvale, CA"
+        description="See how West Ward Works helps businesses get more customers with digital marketing, SEO, social media marketing and branding."
+        path="/case-studies"
+      />
       {/* Hero Header with 3D Background */}
       <section className="relative py-16 lg:py-20 border-b border-white/10 overflow-hidden">
         <Hero3DBackground theme="california" density="low" />

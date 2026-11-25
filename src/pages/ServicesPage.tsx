@@ -11,6 +11,7 @@ import { ServiceCard } from '../components/ServiceCard';
 import { CallToActionBanner } from '../components/CallToActionBanner';
 import { getServicesByCategory } from '../lib/servicesData';
 import { TextReveal } from '../components/ui/TextReveal';
+import { Seo } from '../components/Seo';
 
 export const ServicesPage: React.FC = () => {
   const digitalGrowthServices = getServicesByCategory('Digital Growth');
@@ -19,6 +20,11 @@ export const ServicesPage: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-20">
+      <Seo
+        title="Marketing, Branding, SEO & Social Media Services | West Ward Works Eastvale, CA"
+        description="Digital marketing, branding, SEO, social media management, Google Ads, Meta Ads, website and app development services from West Ward Works in Eastvale, California, serving the Inland Empire and Los Angeles."
+        path="/services"
+      />
       {/* ==========================================
           HERO BANNER WITH 3D CANVAS
           ========================================== */}

@@ -23,6 +23,7 @@ import { Hero3DBackground } from '../components/3d/Hero3DBackground';
 import { MagneticButton } from '../components/ui/MagneticButton';
 import { TextReveal } from '../components/ui/TextReveal';
 import { ContactFormData } from '../types';
+import { Seo } from '../components/Seo';
 
 // Zod Schema Validation
 const contactSchema = z.object({
@@ -76,6 +77,11 @@ export const ContactPage: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-20">
+      <Seo
+        title="Contact West Ward Works | Marketing Agency in Eastvale, CA | (951) 454-2565"
+        description="Contact West Ward Works in Eastvale, California for digital marketing, branding and social media management. Call +1 (951) 454-2565 or email marketing@gmail.com for a free consultation."
+        path="/contact"
+      />
       {/* Header Banner */}
       <section className="relative py-16 lg:py-20 border-b border-white/10 overflow-hidden">
         <Hero3DBackground theme="california" density="low" />
@@ -323,10 +329,10 @@ export const ContactPage: React.FC = () => {
                       <MapPin className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="font-bold text-white">San Francisco Headquarters</div>
+                      <div className="font-bold text-white">Eastvale Office</div>
                       <div className="text-slate-400 mt-0.5 leading-relaxed">
-                        100 California Street, Suite 400<br />
-                        San Francisco, CA 94111, United States
+                        Eastvale, California 92880<br />
+                        Serving the Inland Empire, Los Angeles & nationwide
                       </div>
                     </div>
                   </div>
@@ -337,8 +343,8 @@ export const ContactPage: React.FC = () => {
                     </div>
                     <div>
                       <div className="font-bold text-white">Email Inquiries</div>
-                      <a href="mailto:hello@westwardworks.agency" className="text-[#536DFE] hover:text-indigo-300 hover:underline font-semibold block mt-0.5">
-                        hello@westwardworks.agency
+                      <a href="mailto:marketing@gmail.com" className="text-[#536DFE] hover:text-indigo-300 hover:underline font-semibold block mt-0.5">
+                        marketing@gmail.com
                       </a>
                     </div>
                   </div>
@@ -349,8 +355,8 @@ export const ContactPage: React.FC = () => {
                     </div>
                     <div>
                       <div className="font-bold text-white">Direct Inbound Line</div>
-                      <a href="tel:+18004567890" className="text-slate-300 hover:text-white font-semibold block mt-0.5">
-                        +1 (800) 456-7890
+                      <a href="tel:+19514542565" className="text-slate-300 hover:text-white font-semibold block mt-0.5">
+                        +1 (951) 454-2565
                       </a>
                     </div>
                   </div>
@@ -380,7 +386,7 @@ export const ContactPage: React.FC = () => {
                       <MapPin className="w-5 h-5 fill-white text-white" />
                     </div>
                     <div className="mt-2 bg-slate-900 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-lg border border-white/15">
-                      WEST WARD WORKS HQ • San Francisco
+                      WEST WARD WORKS • Eastvale, CA
                     </div>
                   </div>
 

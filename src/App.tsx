@@ -12,6 +12,8 @@ import { CaseStudiesPage } from './pages/CaseStudiesPage';
 import { CaseStudyDetailPage } from './pages/CaseStudyDetailPage';
 import { PortfolioPage } from './pages/PortfolioPage';
 import { ContactPage } from './pages/ContactPage';
+import { LocalMarketingPage } from './pages/LocalMarketingPage';
+import { LOCAL_PAGE_PATH } from './lib/siteConfig';
 
 export default function App() {
   return (
@@ -31,6 +33,7 @@ export default function App() {
             <Route path="/case-studies/:slug" element={<CaseStudyDetailPage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path={LOCAL_PAGE_PATH} element={<LocalMarketingPage />} />
             {/* Catch-all fallback */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

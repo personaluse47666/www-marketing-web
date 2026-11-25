@@ -12,6 +12,7 @@ import { Hero3DBackground } from '../components/3d/Hero3DBackground';
 import { TiltCard } from '../components/ui/TiltCard';
 import { TextReveal } from '../components/ui/TextReveal';
 import { CallToActionBanner } from '../components/CallToActionBanner';
+import { Seo } from '../components/Seo';
 
 type PortfolioCategory = 'All' | 'Web Development' | 'Graphic Design' | 'Video & Social' | 'Marketing Campaigns';
 
@@ -33,6 +34,11 @@ export const PortfolioPage: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-20">
+      <Seo
+        title="Branding, Web & Creative Portfolio | West Ward Works Eastvale, CA"
+        description="Branding, website, app and creative work by West Ward Works, a digital marketing agency in Eastvale, California."
+        path="/portfolio"
+      />
       {/* Hero Header with 3D Background */}
       <section className="relative py-16 lg:py-20 border-b border-white/10 overflow-hidden">
         <Hero3DBackground theme="california" density="low" />

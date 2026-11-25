@@ -16,6 +16,8 @@ import { Hero3DBackground } from '../components/3d/Hero3DBackground';
 import { MagneticButton } from '../components/ui/MagneticButton';
 import { CaseStudyCard } from '../components/CaseStudyCard';
 import { CallToActionBanner } from '../components/CallToActionBanner';
+import { Seo, faqJsonLd, breadcrumbJsonLd } from '../components/Seo';
+import { SITE_URL } from '../lib/siteConfig';
 
 export const ServiceDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -56,6 +58,28 @@ export const ServiceDetailPage: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-20">
+      <Seo
+        title={`${service.title} in Eastvale, CA & Los Angeles | West Ward Works`}
+        description={`${service.shortDescription} ${service.title} for businesses in Eastvale, the Inland Empire and Los Angeles. Call +1 (951) 454-2565.`.slice(0, 300)}
+        path={`/services/${service.slug}`}
+        jsonLd={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            name: service.title,
+            description: service.fullDescription,
+            serviceType: service.title,
+            provider: { '@id': `${SITE_URL}/#business` },
+            areaServed: ['Eastvale, CA', 'Inland Empire, CA', 'Los Angeles, CA', 'United States'],
+          },
+          breadcrumbJsonLd([
+            { name: 'Home', path: '/' },
+            { name: 'Services', path: '/services' },
+            { name: service.title, path: `/services/${service.slug}` },
+          ]),
+          ...(service.faqs?.length ? [faqJsonLd(service.faqs)] : []),
+        ]}
+      />
       {/* ==========================================
           DYNAMIC HERO SECTION
           ========================================== */}
